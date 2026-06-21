@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 st.set_page_config(page_title="Anime Recommendation System",layout="wide")
 load_dotenv()
-@st.catch_resource
+@st.cache_resource
 def init_pipeline():
     return AnimeRecommendationPipeline()
 
